@@ -9,6 +9,7 @@
 \newcommand{\docTitle}{Your Document Title - Title of the project}  % Full title of the document
 \newcommand{\headerTitle}{Short Header Title}  % Use short title or \docTitle for header
 \newcommand{\docSubtitle}{Subtitle (If Applicable)}
+\newcommand{\batch}{XX}
 \newcommand{\courseName}{Final Year Project}  % Course name (e.g., B.Tech, M.Tech, etc.)
 \newcommand{\keyWords}{Keyword1, Keyword2, Keyword3}
 \newcommand{\docVersion}{1.0}  % Document version
@@ -16,6 +17,7 @@
 % --- Student Details ---
 \newcommand{\studentName}{Student 1 Name}  % Full name of the student
 \newcommand{\studentRoll}{217Y1A05XX}
+
 \addstudent{\studentName}{\studentRoll}
 % Use the \addstudent command to include additional students in the report.
 % Example:
@@ -56,14 +58,13 @@
 \newcommand{\directorDesignation}{Director}             % Example: Director
 
 % --- Academic Year ---
-\newcommand{\academicYear}{2023--2024}  % Set the academic year
+\newcommand{\academicYear}{2024--2025}  % Set the academic year
 
 % --- Report Details ---
-\newcommand{\reportType}{Technical Seminar Report}
+\newcommand{\reportType}{Major Project}
 
 % --- Manual Date Option ---
 % Custom date setting using datetime package
-% Uncomment and modify to set a custom date
 \newdate{customdate}{04}{04}{2024}  % Format: day, month, year
 \renewcommand{\today}{\displaydate{customdate}}  % Make \today use our custom date
 % The date will respect the defined formats like dashdate
