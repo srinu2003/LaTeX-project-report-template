@@ -2,12 +2,12 @@
 \chapter{Introduction}
 \label{chap:introduction}
 
-The introduction should provide background information on your topic, explain the significance of your research, and clearly state your research question or objective. This chapter should also outline the structure of the document and briefly summarize each subsequent chapter. 
+The introduction should provide background information on your topic, explain the significance of your research, and clearly state your research question or objective. This chapter should also outline the structure of the document and briefly summarize each subsequent chapter.
 
 Times New Roman font is used for the text in this document, and the font size is set to 12pt. The line spacing is set to 1.5 for better readability.
 
 \section{Background}
-This section should provide context for your research, explaining fundamental concepts necessary for understanding your work. 
+This section should provide context for your research, explaining fundamental concepts necessary for understanding your work.
 % Artificial Intelligence (\gls{ai}) is a rapidly growing field. Subfields such as \gls{ml} and \gls{nlp} are gaining significant attention.
 
 \section{Motivation}
@@ -50,25 +50,25 @@ This section presents the algorithms used in this research.
 Algorithm \ref{alg:example} demonstrates a basic search algorithm. This example shows how to properly format and include algorithms in your document.
 
 \begin{algorithm}
-\caption{Binary Search Algorithm}
-\label{alg:example}
-\begin{algorithmic}[1]
-\Procedure{BinarySearch}{$A, n, x$}
-    \State $low \gets 1$
-    \State $high \gets n$
-    \While{$low \leq high$}
+    \caption{Binary Search Algorithm}
+    \label{alg:example}
+    \begin{algorithmic}[1]
+        \Procedure{BinarySearch}{$A, n, x$}
+        \State $low \gets 1$
+        \State $high \gets n$
+        \While{$low \leq high$}
         \State $mid \gets low + \lfloor (high - low) / 2 \rfloor$ \Comment{Avoid integer overflow}
         \If{$A[mid] < x$}
-            \State $low \gets mid + 1$
+        \State $low \gets mid + 1$
         \ElsIf{$A[mid] > x$}
-            \State $high \gets mid - 1$
+        \State $high \gets mid - 1$
         \Else
-            \State \Return $mid$
+        \State \Return $mid$
         \EndIf
-    \EndWhile
-    \State \Return $-1$
-\EndProcedure
-\end{algorithmic}
+        \EndWhile
+        \State \Return $-1$
+        \EndProcedure
+    \end{algorithmic}
 \end{algorithm}
 
 \subsection{Algorithm Complexity Analysis}
@@ -126,6 +126,42 @@ def example_function(parameter):
 value = 42
 print(f"The result is: {example_function(value)}")
 \end{lstlisting}
+The following code example demonstrates how to include code in your document using the \texttt{minted} package. This package provides syntax highlighting for various programming languages. Refer to Listing \ref{lst:python_example_minted} for an example of Python code included using the \texttt{minted} package.
+% Example of including code using minted
+\begin{listing}[H]
+\begin{minted}{py}
+def example_function(parameter):
+    """
+    This is a sample function to demonstrate code inclusion. It takes a parameter and returns its double.
+    :param parameter: The input value to be doubled.
+    """
+    result = parameter * 2
+    return result
+\end{minted}
+\caption{Sample Python Code}
+\label{lst:python_example_minted}
+\end{listing}
+
+
+You can just write the code in the text without listing in document, this do not use listing, just write the code in the text. This is useful for small code snippets or examples that do not require a full listing format. For example, you can write a simple function in JavaScript like this:
+\begin{minted}{javascript}
+function calculateFactorial(n) {
+    // Base case: factorial of 0 or 1 is 1
+    if (n === 0 || n === 1) {
+        return 1;
+    }
+
+    // Recursive case: n * factorial of (n - 1)
+    return n * calculateFactorial(n - 1);
+}
+
+// Example usage of the calculateFactorial function
+const number = 5; // Number to calculate the factorial of
+const factorial = calculateFactorial(number); // Perform the calculation
+
+// Output the result
+console.log(`The factorial of ${number} is ${factorial}`);
+\end{minted}
 
 \subsection{Example Equations}
 Below are sample equations formatted in LaTeX:
@@ -140,8 +176,8 @@ The quadratic formula $ax^2 + bx + c = 0$ has the solution $x = \frac{-b \pm \sq
 
 % Equation array example
 \begin{align}
-    (a+b)^2 &= a^2 + 2ab + b^2\\
-    (a-b)^2 &= a^2 - 2ab + b^2
+    (a+b)^2 & = a^2 + 2ab + b^2 \\
+    (a-b)^2 & = a^2 - 2ab + b^2
 \end{align}
 
 % --- Methodology ---
@@ -181,9 +217,9 @@ Table \ref{tab:sample_table} presents the sample data collected during the exper
         \hline
         \textbf{Column 1} & \textbf{Column 2} & \textbf{Column 3} \\
         \hline
-        Row 1, Cell 1 & Row 1, Cell 2 & Row 1, Cell 3 \\
-        Row 2, Cell 1 & Row 2, Cell 2 & Row 2, Cell 3 \\
-        Row 3, Cell 1 & Row 3, Cell 2 & Row 3, Cell 3 \\
+        Row 1, Cell 1     & Row 1, Cell 2     & Row 1, Cell 3     \\
+        Row 2, Cell 1     & Row 2, Cell 2     & Row 2, Cell 3     \\
+        Row 3, Cell 1     & Row 3, Cell 2     & Row 3, Cell 3     \\
         \hline
     \end{tabular}
 \end{table}
